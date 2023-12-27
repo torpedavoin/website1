@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <h1>Resume</h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="scrollToSection('about')">About Me</a></li>
+                    <li><a href="#" onclick="scrollToSection('education')">Education</a></li>
+                    <li><a href="#" onclick="scrollToSection('experience')">Experience</a></li>
+                    <li><a href="#" onclick="scrollToSection('skills')">Skills</a></li>
+                    <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="image-container">
+        <img src="Image2.jpg" alt="test">
+        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            &diamond; Hello! I'm Sergei Saunin third-year computer science student with a keen interest in game development and neural networks. While I haven't accumulated professional experience I'm actively learning  gain practical skills. My enthusiasm lies in contributing to creative and innovative solutions in software development, particularly within the realms of gaming and artificial intelligence. I'm eager to embark on new challenges and further develop my abilities in these exciting fields.
+        </p>
+    </section>
+
+    
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>&diamond; Kherson State University, 3rd year, Faculty of Computer Science, Physics, and Mathematics</p>
+        <p>&diamond; Kherson Physical and Technical Lyceum of the Kherson City Council</p>
+    </section>
+
+    
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <p>&diamond; ---</p>
+        <p>&diamond; ---</p>
+        <p>&diamond; ---</p>
+    </section>
+
+    
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="progress-container">
+                <svg class="progress-circle html">
+                    <circle class="progress-bar" cx="50%" cy="50%" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">0%</text>
+                </svg>
+            </div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="progress-container">
+                <svg class="progress-circle css">
+                    <circle class="progress-bar" cx="50%" cy="50%" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">40%</text>
+                </svg>
+            </div>
+        </div>
+        <div class="skill">
+            <p>English</p>
+            <div class="progress-container">
+                <svg class="progress-circle english">
+                    <circle class="progress-bar" cx="50%" cy="50%" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">B1</text>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="skill-label">B1</text>
+                </svg>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Communication</p>
+            <div class="progress-container">
+                <svg class="progress-circle communication">
+                    <circle class="progress-bar communication" cx="50%" cy="50%" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">72%</text>
+                </svg>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Work in Team</p>
+            <div class="progress-container">
+                <svg class="progress-circle work-in-team">
+                    <circle class="progress-bar team" cx="50%" cy="50%" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">70%</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Анимировать прогрессбары после полной загрузки документа
+            animateProgressBar("html", 45); // Замените 50 на желаемый процент для HTML
+            animateProgressBar("css", 40); // Замените 40 на желаемый процент для CSS
+            animateProgressBar("english", 50); // Замените 60 на желаемый процент для English
+            animateProgressBar("communication", 73);
+            animateProgressBar("work-in-team", 70);
+        });
+    
+        function animateProgressBar(skill, percent) {
+            const progressBar = document.querySelector(`.progress-circle.${skill} .progress-bar`);
+            const textElement = document.querySelector(`.progress-circle.${skill} text`);
+    
+            const offsetValue = 251.2 - (251.2 * percent) / 100;
+            progressBar.style.strokeDashoffset = offsetValue;
+    
+            // Скрываем текст только для "English"
+            if (skill === 'english') {
+                textElement.classList.add('hidden');
+            }
+    
+            textElement.textContent = `${percent}%`;
+        }
+    </script>
+    
+    
+
+    </section>
+        <section id="contact">
+        <h2>Contact Information</h2>
+        <p>&starf; Gmail: <a href="mailto:saunin0322@gmai.com">saunin0322@gmai.com</a></p>
+        <p>&check; Telegram: <a href="https://t.me/dati_dizu_dan_datu_chipu" target="_blank">@dati_dizu_dan_datu_chipu</a></p>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>2023</p>
+        </div>
+        <div id="scrollToTop" onclick="scrollToTop()">
+            &#9650;
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+            event.preventDefault();
+        }
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    </script>
+</body>
+</html>

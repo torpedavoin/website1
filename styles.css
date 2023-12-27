@@ -1,0 +1,289 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #252527;
+    color: #bbb8b5;
+    font-size: 18px; 
+    background-image: url(bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #252527;
+    color: #fff;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.image-container {
+    text-align: center; 
+}
+
+.image-container img {
+    max-width: 50%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+nav {
+    text-align: right;
+    padding-right: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    color: #bbb8b5;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10xp;
+    /*margin-bottom: 10px;*/
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(211, 211, 211, 1);
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #003c8f;
+    color: #fff;
+}
+nav li a {
+    padding: 10px;
+}
+
+section {
+    margin: 40px;
+    /*background-color: #64b4f691;*/
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #adadad;
+    font-size: 1.2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    color: #357afc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+footer {
+    background-color: #252527;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.footer-content {
+    padding-top: 20px;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #1565C0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display:flex; 
+}
+
+#scrollToTop:hover {
+    background-color: #003c8f;
+}
+
+#contact {
+    margin-top: 20px;
+    margin-bottom: 90px;
+    /*background-color: #64b4f6a8;*/
+    color: #252527;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em; 
+}
+
+#contact h2 {
+    color: #357afc;
+}
+
+#contact p {
+    margin: 15px 0;
+    padding: 0;
+    font-size: 18px;
+    color: #adadad;
+}
+
+#contact a {
+    color: #357afc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #0352ad;
+}
+
+
+.skill {
+    position: relative;
+    width: 150px; 
+    height: 150px;
+    display: inline-block;
+    margin: 50px;
+}
+
+.skill p {
+    text-align: center;
+    margin: 10px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.skill svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.skill circle {
+    fill: none;
+    stroke: #1565C0; 
+    stroke-width: 10; 
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.skill text {
+    fill: #fff; 
+    font-size: 1em; 
+    dominant-baseline: middle; 
+    text-anchor: middle; 
+}
+
+.skill .progress-circle .progress-bar {
+    fill: none;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 1s ease-out;
+}
+/*
+.skill .progress-circle.html .progress-bar {
+    stroke: #1565C0;
+    stroke-width: 10;
+    stroke-dashoffset: 251.2;
+}
+
+.skill .progress-circle.css .progress-bar {
+    stroke: #1565C0;
+    stroke-width: 10;
+    stroke-dashoffset: 150.72; 
+}
+
+.skill .progress-circle.english .progress-bar {
+    stroke: #1565C0;
+    stroke-width: 10;
+    stroke-dashoffset: 100.48; 
+}
+.skill .progress-circle.communication .progress-bar {
+    stroke: #1565C0;
+    stroke-width: 10;
+    stroke-dashoffset: 70.336; 
+}
+.skill .progress-circle.work-in-team .progress-bar {
+    stroke: #1565C0;
+    stroke-width: 10;
+    stroke-dashoffset: 75.36; 
+}
+*/
+
+
+
+@media only screen and (max-width: 600px) {
+    .skill {
+        text-align: center; 
+        margin: 10px 0; 
+    }
+
+    .skill p {
+        margin-top: 10px; 
+    }
+
+    .skill svg {
+        position: static; 
+        width: auto; 
+        height: auto; 
+        margin-top: 10px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Добавляем стиль для разделителя секций */
+.section-divider {
+    height: 20px; /* Высота разделительной полосы */
+    background-color: #fff; /* Цвет разделительной полосы (белый) */
+    margin-bottom: 20px; /* Расстояние между секциями */
+}
+
+/* ... Ваш остальной CSS ... */
+
+
