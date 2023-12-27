@@ -106,10 +106,9 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Анимировать прогрессбары после полной загрузки документа
-            animateProgressBar("html", 45); // Замените 50 на желаемый процент для HTML
-            animateProgressBar("css", 40); // Замените 40 на желаемый процент для CSS
-            animateProgressBar("english", 50); // Замените 60 на желаемый процент для English
+            animateProgressBar("html", 45); 
+            animateProgressBar("css", 40); 
+            animateProgressBar("english", 50); 
             animateProgressBar("communication", 73);
             animateProgressBar("work-in-team", 70);
         });
@@ -121,7 +120,6 @@
             const offsetValue = 251.2 - (251.2 * percent) / 100;
             progressBar.style.strokeDashoffset = offsetValue;
     
-            // Скрываем текст только для "English"
             if (skill === 'english') {
                 textElement.classList.add('hidden');
             }
